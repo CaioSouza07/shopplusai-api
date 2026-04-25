@@ -23,7 +23,7 @@ public class GlobalExceptionHandler {
         var responseError = new ErrorResponse(
             HttpStatus.BAD_REQUEST.value(),
     "Erro de validação dos campos",
-            errors.stream().map(ErrorValidationResponse::new).collect(Collectors.toList())
+            errors.stream().map(ErrorValidationResponse::new).toList()
         );
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseError);
     }
