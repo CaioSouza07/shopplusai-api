@@ -5,6 +5,7 @@ import com.univille.api.shopplusai.domain.usuario.dto.UsuarioResponse;
 import com.univille.api.shopplusai.infra.exception.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -12,12 +13,14 @@ public class UsuarioService {
 
     private final UsuarioRepository repository;
 
+    @Transactional
     public UsuarioResponse save(CreateUsuarioRequest dados){
         var usuario = new Usuario(dados);
         repository.save(usuario);
         return new UsuarioResponse(usuario);
     }
 
+    @Transactional
     public void delete(Long id){
         var usuario = repository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Usuário não encontrado"));
