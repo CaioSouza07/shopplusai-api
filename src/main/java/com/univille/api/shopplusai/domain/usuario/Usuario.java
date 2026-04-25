@@ -1,5 +1,6 @@
 package com.univille.api.shopplusai.domain.usuario;
 
+import com.univille.api.shopplusai.domain.usuario.dto.CreateUsuarioRequest;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,4 +23,9 @@ public class Usuario {
 
     @Column(nullable = false, unique = true)
     private String email;
+
+    public Usuario(CreateUsuarioRequest dados){
+        this.nome = dados.nome();
+        this.email = dados.email();
+    }
 }
