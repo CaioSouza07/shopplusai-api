@@ -22,5 +22,16 @@ public class UsuarioService {
         var usuario = repository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Usuário não encontrado"));
     }
-    
+
+    public UsuarioResponse getById(Long id){
+        var usuario = repository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Usuário não encontrado"));
+        return new UsuarioResponse(usuario);
+    }
+
+    public UsuarioResponse getByEmail(String email){
+        var usuario = repository.findByEmail(email)
+                .orElseThrow(() -> new NotFoundException("Usuário não encontrado"));
+        return new UsuarioResponse(usuario);
+    }
 }
