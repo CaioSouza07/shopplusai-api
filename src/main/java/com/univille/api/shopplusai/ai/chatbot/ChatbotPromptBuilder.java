@@ -114,7 +114,19 @@ public class ChatbotPromptBuilder {
             """;
         }
 
-    public String contextPrompt(String pergunta, List<Avaliacao> avaliacoes, List<Produto> produtos){
+    public String contextPrompt(String pergunta,List<ChatMessage> historico, List<Avaliacao> avaliacoes, List<Produto> produtos){
+        String historicoTexto = historico.stream()
+                .map(msg -> """
+                {
+                  "role": "%s",
+                  "content": "%s"
+                }
+                """.formatted(
+                        msg.getRole(),
+                        msg.getContent()
+                ))
+                .collect(Collectors.joining(",\n"));
+
         String promptProdutos = produtos.stream()
                 .map(produto -> """
                 {
@@ -150,18 +162,22 @@ public class ChatbotPromptBuilder {
                 .collect(Collectors.joining(",\n"));
 
         return """
-            {
-              "dadosUtilitarios": {
-                "produtos": [
-                  %s
-                ],
-                "avaliacoes": [
-                  %s
-                ]
-              },
-              "perguntaUsuario": "%s"
-            }
-            """.formatted(
+        {
+          "historicoConversa": [
+            %s
+          ],
+          "dadosUtilitarios": {
+            "produtos": [
+              %s
+            ],
+            "avaliacoes": [
+              %s
+            ]
+          },
+          "perguntaUsuario": "%s"
+        }
+        """.formatted(
+                    historicoTexto,
                     promptProdutos,
                     promptAvaliacoes,
                     pergunta
