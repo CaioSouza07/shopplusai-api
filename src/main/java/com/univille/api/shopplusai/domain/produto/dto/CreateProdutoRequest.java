@@ -12,6 +12,10 @@ public record CreateProdutoRequest (
         Long idCategoria,
 
         @NotNull
-        Double preco)
+        Double preco,
+
+        @NotNull
+        String image
+)
 {
 }

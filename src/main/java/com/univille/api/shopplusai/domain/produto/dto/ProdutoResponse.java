@@ -5,8 +5,8 @@ import com.univille.api.shopplusai.domain.produto.Produto;
 import org.jspecify.annotations.Nullable;
 
 
-public record ProdutoResponse(Long id, String nome, Categoria categoria, double preco) {
-    public ProdutoResponse(Produto produto){this(produto.getId(), produto.getNome(), produto.getCategoria(), produto.getPreco());}
+public record ProdutoResponse(Long id, String nome, Categoria categoria, double preco, String image) {
+    public ProdutoResponse(Produto produto){this(produto.getId(), produto.getNome(), produto.getCategoria(), produto.getPreco(), produto.getImage());}
 
 }
 
