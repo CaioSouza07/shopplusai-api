@@ -30,6 +30,7 @@ public class ProdutoService {
         produto.setNome(dados.nome());
         produto.setCategoria(categoria);
         produto.setPreco(dados.preco());
+        produto.setImage(dados.image());
         repository.save(produto);
         return new ProdutoResponse(produto);
     }
