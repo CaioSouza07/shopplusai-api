@@ -1,0 +1,16 @@
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/sg-11134201-820l4-mnymcsbmslxi8e@resize_w900_nl.webp' WHERE id = 1;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/sg-11134201-8262g-mlgfeh825qmn43@resize_w900_nl.webp' WHERE id = 2;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/sg-11134201-82284-mhey4dpyaxvyde@resize_w900_nl.webp' WHERE id = 3;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/sg-11134201-8260t-mj7dr44whame43@resize_w900_nl.webp' WHERE id = 4;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/sg-11134201-7rdyg-mbny7d6zgbkd1b@resize_w900_nl.webp' WHERE id = 5;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfa4tk61l4p36d@resize_w900_nl.webp' WHERE id = 6;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/br-11134207-820lc-mmbwbqx7bdhcad@resize_w900_nl.webp' WHERE id = 7;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/br-11134207-820l8-mlf0a7sljkli30@resize_w900_nl.webp' WHERE id = 8;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/sg-11134201-820nx-mnyclanragaq30@resize_w900_nl.webp' WHERE id = 9;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/br-11134207-820la-mmhpvejzo64m8a@resize_w900_nl.webp' WHERE id = 10;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/br-11134207-81ztc-mkd42kz9bhtt0d@resize_w900_nl.webp' WHERE id = 11;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/br-11134207-820ma-mn1tpukx1uys34@resize_w900_nl.webp' WHERE id = 12;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/sg-11134201-7rdvg-mdqdjl6jeazd00@resize_w900_nl.webp' WHERE id = 13;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/ef788565131e95bdac2f38ec67b8d973@resize_w900_nl.webp' WHERE id = 14;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/br-11134207-820l5-ml8mz0231jie85@resize_w900_nl.webp' WHERE id = 15;
+UPDATE produtos SET imagem = 'https://down-br.img.susercontent.com/file/br-11134207-820ls-mnvoodrxphxec7@resize_w900_nl.webp' WHERE id = 16;

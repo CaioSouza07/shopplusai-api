@@ -30,7 +30,7 @@ public class Produto{
     @Column(nullable = false)
     private double preco;
 
-    @Column
+    @Column(name = "imagem")
     private String image;
 
 }
