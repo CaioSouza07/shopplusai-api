@@ -42,7 +42,7 @@ public class ProdutoController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<ProdutoResponse>> getAll(@PageableDefault Pageable paginacao) {
+    public ResponseEntity<Page<ProdutoResponse>> getAll(@PageableDefault(size = 20) Pageable paginacao) {
         var page = service.getAll(paginacao);
         return ResponseEntity.ok().body(page);
     }

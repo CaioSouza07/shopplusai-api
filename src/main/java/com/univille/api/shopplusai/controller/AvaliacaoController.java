@@ -39,7 +39,7 @@ public class AvaliacaoController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<AvaliacaoResponse>> getAll(@PageableDefault Pageable paginacao) {
+    public ResponseEntity<Page<AvaliacaoResponse>> getAll(@PageableDefault(size = 40) Pageable paginacao) {
         var page = service.getAll(paginacao);
         return ResponseEntity.ok(page);
     }
